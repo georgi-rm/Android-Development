@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.example.t06androidapplicationnavigationandlifecycle.FirstFragment"
+        android:label="FirstFragment">
+
+        <action
+            android:id="@+id/action_first_fragment_to_second_fragment"
+            app:destination="@id/second_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.example.t06androidapplicationnavigationandlifecycle.SecondFragment"
+        android:label="SecondFragment">
+
+        <action
+            android:id="@+id/action_second_fragment_to_third_fragment"
+            app:destination="@id/third_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/third_fragment"
+        android:name="com.example.t06androidapplicationnavigationandlifecycle.ThirdFragment"
+        android:label="ThirdFragment">
+
+        <action
+            android:id="@+id/action_third_fragment_to_fourth_fragment"
+            app:destination="@id/fourth_fragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/fourth_fragment"
+        android:name="com.example.t06androidapplicationnavigationandlifecycle.FourthFragment"
+        android:label="FourthFragment">
+
+        <action
+            android:id="@+id/action_Fourth_fragment_to_first_fragment"
+            app:destination="@id/first_fragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/first_fragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+
+</navigation>
